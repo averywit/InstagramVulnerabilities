@@ -535,10 +535,12 @@ class Worker(threading.Thread):
 
 
 if __name__ == '__main__':
-    # On-screen input for desired checks
+    
+    # List that includes all the .txt user:email pairs
     entries = []
 
     # ADD .TXT FILE INTO "ue_list" TO CHECK USER:EMAIL PAIRS
+    # ******************* REQUIRED *******************
     ue_list = ""
     with open(ue_list, 'r') as in_file:
         for line in in_file:
