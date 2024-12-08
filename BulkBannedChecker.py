@@ -503,7 +503,7 @@ class Worker(threading.Thread):
 
                     # Make the request, completing banned account check.
                     # Timeout of 5 seconds in case of a bad proxy.
-                    response = requests.post(url="https://i.instagram.com/api/v1/users/lookup/", headers=headers, data=data, timeout=5)
+                    response = requests.post(url="https://i.instagram.com/api/v1/users/lookup/", headers=headers, data=data, proxies=proxies, timeout=5)
 
                     # Status code: 200 = Normal, user is not banned
                     if response.status_code == 200:
